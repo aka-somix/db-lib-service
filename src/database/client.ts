@@ -10,4 +10,4 @@ const pool = new Pool({
   database: DB_NAME,
 });
 
-const pgClient = drizzle(pool);
+export const pgClient = drizzle(pool);

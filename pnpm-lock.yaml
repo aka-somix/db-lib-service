@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      db-lib-database-mgmt:
+        specifier: github:aka-somix/db-lib-database-mgmt#974a92d
+        version: https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/974a92d(@types/pg@8.11.6)
       drizzle-orm:
         specifier: ^0.31.0
         version: 0.31.0(@types/pg@8.11.6)(pg@8.11.5)
@@ -315,6 +318,10 @@ packages:
 
   create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
+
+  db-lib-database-mgmt@https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/974a92d:
+    resolution: {tarball: https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/974a92d}
+    version: 1.0.0
 
   debug@2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -1058,6 +1065,37 @@ snapshots:
   cookie@0.6.0: {}
 
   create-require@1.1.1: {}
+
+  db-lib-database-mgmt@https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/974a92d(@types/pg@8.11.6):
+    dependencies:
+      drizzle-orm: 0.31.0(@types/pg@8.11.6)(pg@8.11.5)
+      pg: 8.11.5
+    transitivePeerDependencies:
+      - '@aws-sdk/client-rds-data'
+      - '@cloudflare/workers-types'
+      - '@electric-sql/pglite'
+      - '@libsql/client'
+      - '@neondatabase/serverless'
+      - '@op-engineering/op-sqlite'
+      - '@opentelemetry/api'
+      - '@planetscale/database'
+      - '@types/better-sqlite3'
+      - '@types/pg'
+      - '@types/react'
+      - '@types/sql.js'
+      - '@vercel/postgres'
+      - '@xata.io/client'
+      - better-sqlite3
+      - bun-types
+      - expo-sqlite
+      - knex
+      - kysely
+      - mysql2
+      - pg-native
+      - postgres
+      - react
+      - sql.js
+      - sqlite3
 
   debug@2.6.9:
     dependencies:

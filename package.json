@@ -4,6 +4,7 @@
 		"dev": "nodemon src/app.ts"
 	},
 	"dependencies": {
+		"db-lib-database-mgmt": "github:aka-somix/db-lib-database-mgmt#974a92d",
 		"drizzle-orm": "^0.31.0",
 		"express": "^4.19.2",
 		"pg": "^8.11.5"
