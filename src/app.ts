@@ -1,5 +1,7 @@
 // src/server.ts
 import express, { Request, Response } from 'express';
+import { CustomerService } from './services/customerSerivce';
+import path from 'path';
 
 const app = express();
 const port = 3000;
@@ -9,19 +11,13 @@ app.use(express.json());
 
 // Basic route
 app.get('/', (req: Request, res: Response) => {
-  res.send('Hello, World!');
+  res.sendFile(path.join(__dirname, '/static/index.html'));
 });
 
 // Example route with parameter
-app.get('/hello/:name', (req: Request, res: Response) => {
-  const { name } = req.params;
-  res.send(`Hello, ${name}!`);
-});
-
-// Example POST route
-app.post('/data', (req: Request, res: Response) => {
-  const data = req.body;
-  res.json({ receivedData: data });
+app.get('/customer', async (req: Request, res: Response) => {
+  const customers = await CustomerService.getCustomers()
+  res.send(customers);
 });
 
 // Start the server
