@@ -1,7 +1,8 @@
 // src/server.ts
 import express, { Request, Response } from 'express';
-import { CustomerService } from './services/customerSerivce';
 import path from 'path';
+import { CustomerService } from './services/customerSerivce';
+import { OrderService } from './services/orderService';
 
 const app = express();
 const port = 3000;
@@ -17,6 +18,21 @@ app.get('/', (req: Request, res: Response) => {
 // Example route with parameter
 app.get('/customer', async (req: Request, res: Response) => {
   const customers = await CustomerService.getCustomers()
+  res.send(customers);
+});
+
+app.get('/customer/{id}', async (req: Request, res: Response) => {
+
+  const { id } = req.params;
+
+  const customers = await CustomerService.getCustomersFromId(id)
+  res.send(customers);
+});
+
+app.get('/customer/{id}/order', async (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  const customers = await OrderService.getAllFromCustomer(id)
   res.send(customers);
 });
 

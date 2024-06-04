@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       db-lib-database-mgmt:
-        specifier: github:aka-somix/db-lib-database-mgmt#main
-        version: https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/0ba9ecd993ba717c5e9f20307f65695575a8c99a(@types/pg@8.11.6)
+        specifier: github:aka-somix/db-lib-database-mgmt#v1.0.1
+        version: https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/f97a54a1de8f8e3539c0a881fa3b1bb3417ca43a(@types/pg@8.11.6)
       drizzle-orm:
         specifier: ^0.31.0
         version: 0.31.0(@types/pg@8.11.6)(pg@8.11.5)
@@ -322,8 +322,8 @@ packages:
   create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
 
-  db-lib-database-mgmt@https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/0ba9ecd993ba717c5e9f20307f65695575a8c99a:
-    resolution: {tarball: https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/0ba9ecd993ba717c5e9f20307f65695575a8c99a}
+  db-lib-database-mgmt@https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/f97a54a1de8f8e3539c0a881fa3b1bb3417ca43a:
+    resolution: {tarball: https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/f97a54a1de8f8e3539c0a881fa3b1bb3417ca43a}
     version: 1.0.0
 
   debug@2.6.9:
@@ -1078,7 +1078,7 @@ snapshots:
 
   create-require@1.1.1: {}
 
-  db-lib-database-mgmt@https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/0ba9ecd993ba717c5e9f20307f65695575a8c99a(@types/pg@8.11.6):
+  db-lib-database-mgmt@https://codeload.github.com/aka-somix/db-lib-database-mgmt/tar.gz/f97a54a1de8f8e3539c0a881fa3b1bb3417ca43a(@types/pg@8.11.6):
     dependencies:
       drizzle-orm: 0.31.0(@types/pg@8.11.6)(pg@8.11.5)
       pg: 8.11.5

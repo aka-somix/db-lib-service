@@ -1,7 +1,7 @@
+import { customers } from 'db-lib-database-mgmt';
 import { eq } from "drizzle-orm";
 import { Customer } from "../@types";
-import {pgClient} from '../database/client';
-import {customers} from 'db-lib-database-mgmt';
+import { pgClient } from '../database/client';
 
 export class CustomerService {
 
@@ -38,5 +38,4 @@ export class CustomerService {
       phoneNumber: customer.phone ?? "-"
     }
   }
-
 }
