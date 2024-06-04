@@ -33,8 +33,8 @@ export class CustomerService {
 
     return {
       id: customer.id.toString(),
-      name: customer.name ?? "-",
-      surname: customer.surname ?? "-",
+      name: customer.name,
+      surname: customer.surname,
       phoneNumber: customer.phone ?? "-"
     }
   }
